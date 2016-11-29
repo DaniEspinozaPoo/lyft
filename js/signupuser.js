@@ -17,6 +17,7 @@ $(document).ready(function(){
 		
 		if (!check) {
 			// aviso al usuario que debe aceptar los terminos
+			$('#mensaje_error').removeClass('hide');
 			$("#mensaje_error").html("Acepte los términos de Lift");
 			// evitar que se mande formulario
 			return false;
