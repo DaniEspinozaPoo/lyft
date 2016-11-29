@@ -1,0 +1,77 @@
+body{
+	background:url(../img/lyft-1.jpg) no-repeat 0px 0px;
+	background-size:cover;
+	background-attachment:fixed;
+	text-align: center;
+}
+
+
+
+.logotipo{
+	width: 12%;
+	
+}
+
+.lyftlog{
+	text-align: center;
+	margin-top: 11%;
+}
+
+
+.bton-registro{
+	width: 80%;
+	text-align: center;
+	color: #F7F9FF;
+	border-radius: 3%;
+	border:solid 1px;
+	border-color: #D8DCE6;
+	padding: 4% 4%;
+	color: #FFFFFF;
+		 margin-left: 19px;
+
+}
+
+.bton-registro a{
+	text-align: center;
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+.bton-registro:hover{
+	transition:.6s ease;
+	text-decoration: none;
+	color: #FFFFFF;
+	background: -webkit-linear-gradient(left, rgba(124,96,201,1) 0%, rgba(99,70,191,1) 19%, rgba(168,0,119,1) 51%, rgba(219,54,164,1) 100%);
+	border:solid 0px;
+	border-style: none;
+}
+
+.log-in:hover{
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+.bton-registro .sign-up{
+    
+
+}
+
+.sign-up:hover{
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+@media (max-width: 479px){
+
+.logotipo{
+	width: 28%;
+}
+
+.bton-registro{
+	text-align: center;
+	margin-top: 330px;
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+}

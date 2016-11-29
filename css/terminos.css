@@ -1,0 +1,43 @@
+body{
+	background:url(../img/logo-splash.png) no-repeat 0px 0px;
+	background-size:cover;
+	background-attachment:fixed;
+}
+
+.logotipo{
+	width: 9%;
+	
+}
+.lyftlog{
+	text-align: center;
+	margin-top: 6%;
+}
+
+.fnd-blanco{
+  background:#fff;
+  width:90%;
+  background-size: cover; 
+  padding:3% 2% 0% 2%;
+}
+.volver{
+	float: left;
+	padding-left: 2%;
+}
+
+
+
+
+
+@media (max-width: 479px){
+
+.logotipo{
+	width: 25%;
+}
+.fnd-blanco{
+  background:#fff;
+  width:90%;
+  margin:30px auto;
+  background-size: cover; 
+}
+}	
+
