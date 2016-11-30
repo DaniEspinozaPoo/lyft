@@ -24,31 +24,31 @@ html, body {
 .usuario{
 	border-radius: 120%;
 	z-index: 4;
-	width: 50%;
-	padding-left: 56px;
+	width: 46%;
+    padding-left: 61px;
 	border-color: #D8DCE6;
 }
 .iconos{
-   width: 18px;
-   margin-right: 5px;
+	width: 18px;
+	margin-right: 5px;
 }
-    #map { 
-      height: 550px; 
-    }
-    
-    .buscador {
-    
-    margin-top: 106%;
-    left: 25%;
-    z-index: 5;
-    background-color: #F40072;
-    padding: 3%2%;
-   	border-radius: 3%;
-    text-align: center;
-    padding-left: 10px;
-    z-index: 2;
-    position: absolute;
-  }
+#map { 
+	height: 550px; 
+}
+
+.buscador {
+	width: 60%;
+	margin-top: 88%;
+	left: 25%;
+	z-index: 5;
+	background-color: #F40072;
+	padding: 3%2%;
+	border-radius: 3%;
+	text-align: center;
+	padding-left: 10px;
+	z-index: 2;
+	position: absolute;
+}
 
 .busca-lugar{
 	background-color: #E1F2F7;
@@ -60,8 +60,8 @@ html, body {
 }
 
 .como-llega{
-    color: #FFFFFF;
-    font-weight: bold;
+	color: #FFFFFF;
+	font-weight: bold;
 }
 
 @media (max-width: 479px){
@@ -70,9 +70,9 @@ html, body {
 		width: 20%;
 	}
 
-html, body {
-	margin: 0;
-	padding: 0;
-}
+	html, body {
+		margin: 0;
+		padding: 0;
+	}
 
 }
