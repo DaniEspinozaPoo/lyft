@@ -40,10 +40,16 @@ body{
 	text-align:center;
 	text-decoration: none;
 	border-radius: 3px;
+	-webkit-appearance: none;
+    cursor: pointer;
+}
 	
 }
 .caja-next a{
 	text-decoration: none;
+	-webkit-appearance: none;
+    cursor: pointer;
+}
 	}
 .caja-next:hover{
 	background-color: #9300FE;
