@@ -16,7 +16,6 @@
   <link rel="stylesheet" type="text/css" href="css/mapa.css">
 
 
-
 </head>
 <body>
 
@@ -36,10 +35,15 @@
           </div>
 
           <nav id="pushmenu1" class="pushmenu">
-           <div class="closebutton fa fa-plus-circle" title="Close Menu"></div>
+           <div class="closebutton fa fa-plus-circle" title="Close Menu">
+
+           </div>
            <ul class="mainnav">
-             <img id="thumbnil" class="usuario" align=center src="img/usuario.jpeg">
-             <li><a href=""><i class="fa fa-map-marker fa-2x" aria-hidden="true"></i> Home</a></li>
+             <div>
+               <img id="thumbnil" class="usuario" align=center src="img/usuario.jpeg">
+               <a class="perfil" style="padding-left: 74px;" href="editperfil.html">View profile</a>
+             </div>            
+             <li><a  href="mapa.html"><i class="fa fa-map-marker fa-2x" aria-hidden="true"></i> Home</a></li>
              <li><a href=""><img class="iconos" src="img/icon/free.png">Free Rides</a></li>
              <li><a href=""><i class="fa fa-history" aria-hidden="true"></i>Ride history</a></li>
              <li><a href=""><i class="fa fa-credit-card" aria-hidden="true"></i> Payment</a></li>
@@ -49,27 +53,88 @@
            </ul>
          </nav>
 
-<article>
-            <div id='map_canvas' style='width:100%; height:500px;'></div>
-        </article>
- 
-    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script> 
 
-    
+         <div class="buscador">
+          <input class="busca-lugar" id="address" type="textbox" value="" placeholder="Busca un lugar">
+          <input class="como-llega" id="submit" type="button" value="Cómo llegar">
+        </div>
+        <div id="map"></div>
+        <div id="localizacion">
+
+        </div>
+        <script>
+          function initMap() {
+            var map = new google.maps.Map(document.getElementById('map'), {
+              center: {lat: -33.4190452, lng: -70.6417096},
+              zoom: 17
+            });
+            var geocoder = new google.maps.Geocoder();
+
+  // Try HTML5 geolocation.
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function(position) {
+      var pos = {
+        lat: position.coords.latitude,
+        lng: position.coords.longitude
+      };
+      var marker = new google.maps.Marker({
+        position: pos,
+        map: map,
+        title: 'Hello World!'
+      });
+      map.setCenter(pos);
+    }, function() {
+      handleLocationError(true, infoWindow, map.getCenter());
+    });
+  } else {
+    // Browser doesn't support Geolocation
+    handleLocationError(false, infoWindow, map.getCenter());
+  }
+  document.getElementById('submit').addEventListener('click', function() {
+    geocodeAddress(geocoder, map);
+  });
+  function geocodeAddress(geocoder, resultsMap) {
+    var address = document.getElementById('address').value;
+    geocoder.geocode({'address': address}, function(results, status) {
+      if (status === google.maps.GeocoderStatus.OK) {
+        resultsMap.setCenter(results[0].geometry.location);
+        var marker = new google.maps.Marker({
+          map: resultsMap,
+          position: results[0].geometry.location
+        });
+      } else {
+        alert('Geocode was not successful for the following reason: ' + status);
+      }
+    });
+  }
+  var infoWindow = new google.maps.InfoWindow({map:map});
+  function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+    infoWindow.setPosition(pos);
+    infoWindow.setContent(browserHasGeolocation ?
+      'Error: La Geolocalizacion fallo.' :
+      'Error: Su navegador no sopurta la Geolocalizacion.');
+  }
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDtSxKpHBVch6aPe7KYMFfS5vaqliExk4&callback=initMap" async defer>
+</script>
 
 
 
 
-         
-       </div>
-     </div>
-   </div>
 
 
 
-   <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
-   <script type="text/javascript" src="js/mapa.js"></script>
-   <script type="text/javascript" src="js/funcionmapa.js"></script>
 
- </body>
- </html>
+</div>
+</div>
+</div>
+
+
+
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="js/mapa.js"></script>
+<script type="text/javascript" src="js/funcionmapa.js"></script>
+
+</body>
+</html>

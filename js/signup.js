@@ -4,7 +4,12 @@ $('#formulario-bandera').on('submit', function(e){
 	
 	// vemos si numero cumple o no los requisitos
 	if (numero.length >= 9) {
-		return true;
+		localStorage.setItem('number', numero);
+		var codigo_generado = 'LAB-' + Math.round(Math.random() * 1000);
+		// mostrar el codigo generado
+
+		// guardarlo en localStorage
+		
 	} else if(numero.length < 9){
 		$('#error-msg').attr('class', '')
 		// avisarle al usuario de su error

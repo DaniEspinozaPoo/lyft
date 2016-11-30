@@ -1,4 +1,7 @@
-
+html, body {
+	margin: 0;
+	padding: 0;
+}
 .logotipo{
 	width: 7%;
 	z-index: 2;
@@ -14,10 +17,6 @@
 }
 
 
-html, body {
-	margin: 0;
-	padding: 0;
-}
 #map {
 	height: 100%;
 }
@@ -32,6 +31,37 @@ html, body {
 .iconos{
    width: 18px;
    margin-right: 5px;
+}
+    #map { 
+      height: 550px; 
+    }
+    
+    .buscador {
+    
+    margin-top: 106%;
+    left: 25%;
+    z-index: 5;
+    background-color: #F40072;
+    padding: 3%2%;
+   	border-radius: 3%;
+    text-align: center;
+    padding-left: 10px;
+    z-index: 2;
+    position: absolute;
+  }
+
+.busca-lugar{
+	background-color: #E1F2F7;
+	border-radius: 2%;
+	padding: 3% 2%;
+	float: left;
+	border-style: none;
+	font-weight: bold;
+}
+
+.como-llega{
+    color: #FFFFFF;
+    font-weight: bold;
 }
 
 @media (max-width: 479px){

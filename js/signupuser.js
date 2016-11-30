@@ -1,12 +1,4 @@
 //localStorage["#contacto-form"] = $("#nombre").val();
-function ejemplo(){
-	
-	var num = Math.round(Math.random()*1000);
-
-	alert("su codigo es" + num);
-}
-
-
 
 $(document).ready(function(){ 
    $('#contacto-form').submit(function(ev){  
@@ -18,7 +10,7 @@ $(document).ready(function(){
 		if (!check) {
 			// aviso al usuario que debe aceptar los terminos
 			$('#mensaje_error').removeClass('hide');
-			$("#mensaje_error").html("Acepte los términos de Lift");
+			$("#mensaje_error").html("Acepte los términos de Lyft");
 			// evitar que se mande formulario
 			return false;
 		}

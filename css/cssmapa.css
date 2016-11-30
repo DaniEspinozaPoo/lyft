@@ -86,9 +86,10 @@ color: #151125;
     margin-bottom: 10px;
 }
 
+
 .pushmenu ul.mainnav a{
     font-size: 1em;
-    padding: 10px;
+    padding: 8px;
     padding-left: 25px;
     display: block;
     color: #7D8F99;
