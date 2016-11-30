@@ -125,9 +125,9 @@ select {
   text-transform: none;
 }
 button,
-html input[type="button"],
+html input[type=""],
 input[type="reset"],
-input[type="submit"] {
+input[type=""] {
   
   cursor: pointer;
 }
