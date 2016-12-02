@@ -38,7 +38,7 @@ html, body {
 
 .buscador {
 	width: 60%;
-	margin-top: 88%;
+	margin-top:  110%;
 	left: 25%;
 	z-index: 5;
 	background-color: #F40072;
@@ -51,6 +51,7 @@ html, body {
 }
 
 .busca-lugar{
+	    width: 49%;
 	background-color: #E1F2F7;
 	border-radius: 2%;
 	padding: 3% 2%;
